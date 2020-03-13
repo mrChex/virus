@@ -38,8 +38,6 @@
 			-ms-touch-action: none;
 		}
     </style>
-	
-
 </head> 
  
 <body> 
@@ -91,6 +89,9 @@
 		{			
 			// Create new runtime using the c2canvas
 			cr_createRuntime("c2canvas");
+			window.parent.postMessage({
+				"method": "SoulAppInit",
+			}, '*');
 		});
 		
 		// Pause and resume on page becoming visible/invisible
