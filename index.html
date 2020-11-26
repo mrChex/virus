@@ -90,9 +90,9 @@
 			// Create new runtime using the c2canvas
 			cr_createRuntime("c2canvas");
 			if (window.ReactNativeWebView) {
-				window.ReactNativeWebView.postMessage({
+				window.ReactNativeWebView.postMessage(JSON.stringify({
 					"method": "SoulAppInit",
-				}, '*');
+				}));
 			} else {
 				window.parent.postMessage({
 					"method": "SoulAppInit",
